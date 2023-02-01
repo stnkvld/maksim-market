@@ -1,17 +1,43 @@
 :root {
+  --basic-font-family: "Cuprum", "PT Sans", sans-serif;
+  --second-font-family: "PT Sans", sans-serif;
   --basic-red: #EE3643;
   --basic-green: #63A63E;
   --basic-grey: #3D546F;
   --basic-background: #F1F5F7;
-  --basic-white: #ffffff;
+  --basic-white: #FFFFFF;
   --basic-black: #000000;
+  --basic-darkblue: #293449;
+  --color-nav-focus: rgba(255, 255, 255, 0.5);
+  --basic-yellow: #FFBF47;
+  --basic-bluish: #3BBCE3;
+  --basic-pink: #DC91D8;
+  --basic-lightgreen: #8ED78F;
+  --background-color-accortment-items-link: rgba(255, 255, 255, 0.3);
+  --background-color-accortment-items-link-hover: rgba(197, 197, 197, 0.3);
+  --background-color-accortment-items-link-focus: rgba(169, 169, 169, 0.3);
+  --background-color-slider-text: rgba(0, 0, 0, 0.25);
+  --background-color-popular-header: #F9F5F0;
+  --color-botton-hover: #CA2C37;
+  --color-button-focus: #BA2732;
+  --color-border-popular: #EAEAEA;
+  --color-text-del: #A9A9A9;
+  --color-border-shadow-botton-buy: #367315;
+  --color-button-buy-hover: #5FBB2D;
+  --color-button-buy-focus: #518534;
+  --color-darkblue: #32425C;
+  --color-darkblue-focus: rgba(50, 66, 92, 0.5);
+  --color-shadow-manufacturers-hover: rgba(0, 0, 0, 0.05);
+  --color-shadow-manufacturers-focus: rgba(0, 0, 0, 0.025);
+  --color-shadow-button-advantages: #405069;
+  --color-footer-link: #FFD180;
 }
 
 .page-body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-family: var(--basic-font-family);
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -63,8 +89,6 @@ img {
   background-color: var(--basic-green);
 }
 
-
-
 .header_info {
   font-size: 16px;
   line-height: 23px;
@@ -82,14 +106,13 @@ img {
 }
 
 .header_info_address {
-  color: var(--basic-grey);
+  color: var(--color-darkblue);
   font-size: 14px;
   line-height: 24px;
   text-align: center;
 }
 
 .button_entry {
-  font: inherit;
   text-align: center;
   color: var(--basic-black);
   font-size: 21px;
@@ -100,13 +123,13 @@ img {
 }
 
 .header_registration {
-  font-style: normal;
   font-size: 21px;
   background-color: var(--basic-white);
   text-decoration: none;
   color: var(--basic-black);
   text-align: center;
   vertical-align: middle;
+  font-style: normal;
 }
 
 .header_registration:hover,
@@ -129,30 +152,23 @@ img {
   list-style: none;
 }
 
-.header_nav_list a {
+.header_nav_link {
   color: var(--basic-white);
   text-decoration: none;
 }
 
-.header_nav_list li:hover {
-  background-color: #293449;
+.header_nav_link:focus {
+  color: var(--color-nav-focus);
 }
 
+.header_nav_list li:hover,
 .header_nav_list li:focus {
-  background-color: #293449;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--basic-darkblue);
 }
 
 .main {
   background-color: var(--basic-white);
 }
-
-.acco .h1 {
-  visibility: hidden;
-  display: none;
-}
-
-/* не понимаю почему не скрывается заголовок */
 
 .accortment {
   color: var(--basic-white);
@@ -166,23 +182,23 @@ img {
 }
 
 .accortment_items_material {
-  background-color: #FFBF47;
+  background-color: var(--basic-yellow);
 }
 
 .accortment_items_tool {
-  background-color: #3BBCE3;
+  background-color: var(--basic-bluish);
 }
 
 .accortment_items_technic {
-  background-color: #DC91D8;
+  background-color: var(--basic-pink);
 }
 
 .accortment_items_discount {
-  background-color: #8ED78F;
+  background-color: var(--basic-lightgreen);
 }
 
 .accortment_items_delivery {
-  background-color: #FFBF47;
+  background-color: var(--basic-yellow);
 }
 
 .accortment_items_link {
@@ -192,16 +208,16 @@ img {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--background-color-accortment-items-link);
   text-align: center;
 }
 
 .accortment_items_link:hover {
-  background-color: rgba(197, 197, 197, 0.3)
+  background-color: var(--background-color-accortment-items-link-hover);
 }
 
 .accortment_items_link:focus {
-  background-color: rgba(169, 169, 169, 0.3);
+  background-color: var(--background-color-accortment-items-link-hover);
 }
 
 .accortment_slider_list {
@@ -211,11 +227,11 @@ img {
 .accortment_slider_figcaption {
   font-size: 36px;
   line-height: 30px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: var(--background-color-slider-text);
   text-transform: uppercase;
 }
 
-.accortment_slider_figcaption p {
+.accortment_slider_figcaption_text {
   text-transform: none;
   font-size: 18px;
   line-height: 24px;
@@ -234,36 +250,36 @@ img {
 }
 
 .button_link:hover {
-  background-color: #CA2C37;
+  background-color: var(--color-botton-hover);
 }
 
 .button_link:focus {
-  background-color: #BA2732;
+  background-color: var(--color-button-focus);
 }
 
 .popular_prod_h2 {
   text-transform: uppercase;
   font-size: 30px;
-  background-color: #F9F5F0;
+  background-color: var(--background-color-popular-header);
   font-weight: 400;
-  color: #32425C;
+  color: #32425C var(--color-darkblue);
 }
 
 .popular_prod_list {
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--second-font-family);
   list-style: none;
   font-weight: 700;
   text-align: center;
 }
 
 .popular_prod_item {
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--color-border-popular);
 }
 
 .popular_prod_item del {
   font-size: 17px;
   line-height: 18px;
-  color: #A9A9A9;
+  color: var(--color-text-del);
 }
 
 .popular_prod_item b {
@@ -281,9 +297,10 @@ img {
 }
 
 .button_buy {
+  font-family: var(--basic-font-family);
   text-transform: uppercase;
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--color-border-shadow-botton-buy);
   border-radius: 2px;
   border: none;
   color: var(--basic-white);
@@ -292,16 +309,17 @@ img {
 }
 
 .button_buy:hover {
-  background-color: #5FBB2D;
+  background-color: var(--color-button-buy-hover);
 }
 
 .button_buy:focus {
-  background-color: #518534;
+  background-color: var(--color-button-buy-focus);
 }
 
 .button_bookmarks {
+  font-family: var(--basic-font-family);
   text-transform: uppercase;
-  color: #32425C;
+  color: var(--color-darkblue);
   font-size: 14px;
   line-height: 18px;
   border: 3px solid var(--basic-green);
@@ -310,20 +328,20 @@ img {
 }
 
 .button_bookmarks:hover {
-  border: solid #32425C;
+  border: solid var(--color-darkblue);
 }
 
 .button_bookmarks:focus {
-  border: solid rgba(50, 66, 92, 0.5);
-  color: rgba(50, 66, 92, 0.5);
+  border: solid var(--color-darkblue-focus);
+  color: var(--color-darkblue-focus);
 }
 
 .popular_manufacturers_h2 {
   text-transform: uppercase;
   font-size: 30px;
-  background-color: #F9F5F0;
+  background-color: var(--background-color-popular-header);
   font-weight: 400;
-  color: #32425C;
+  color: var(--color-darkblue);
 }
 
 .popular_manufacturers_list {
@@ -331,27 +349,23 @@ img {
 }
 
 .popular_manufacturers_item {
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--color-border-popular);
   vertical-align: middle;
   text-align: center;
 }
 
 .popular_manufacturers_item:hover {
-  box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px 3px var(--color-shadow-manufacturers-hover);
 }
 
 .popular_manufacturers_item:focus {
-  box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.025);
+  box-shadow: 1px 1px 2px 3px var(--color-shadow-manufacturers-focus);
   opacity: 0.5;
 }
 
 .advantages {
-  background-color: #F1F5F7;
-  font-family: "PT Sans", sans-serif;
-}
-
-.advantages_h2 {
-  visibility: hidden;
+  background-color: var(--basic-background);
+  font-family: var(--second-font-family);
 }
 
 .advantages_list {
@@ -359,7 +373,7 @@ img {
 }
 
 .advantages_item_h3 {
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-family: var(--basic-font-family);
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
@@ -371,27 +385,27 @@ img {
 }
 
 .advantages_amenities_button {
-  background-color: #32425C;
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  background-color: var(--color-darkblue);
+  font-family: var(--basic-font-family);
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-white);
   border: none;
-  box-shadow: 0px 1px 0px #293449,
-    inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-darkblue),
+    inset 0px 1px 0px var(--color-shadow-button-advantages);
 }
 
 .advantages_amenities_button:hover {
-  background: #293449;
-  box-shadow: 0px 1px 0px #293449,
-    inset 0px 1px 0px #405069;
+  background: var(--basic-darkblue);
+  box-shadow: 0px 1px 0px var(--basic-darkblue),
+    inset 0px 1px 0px var(--color-shadow-button-advantages);
 }
 
 .advantages_amenities_button:focus {
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
-  color: #32425C;
+  color: var(--color-darkblue);
 }
 
 .service_list {
@@ -399,16 +413,12 @@ img {
 }
 
 .service_item_h3 {
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-family: var(--basic-font-family);
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
-  color: #32425C;
+  color: var(--color-darkblue);
   font-weight: 400;
-}
-
-.information_h2 {
-  visibility: hidden;
 }
 
 .information_h3 {
@@ -419,7 +429,7 @@ img {
 }
 
 .information_text {
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--second-font-family);
 }
 
 .transport_companies {
@@ -440,7 +450,7 @@ img {
 }
 
 .contacts p {
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--second-font-family);
 }
 
 .footer {
@@ -460,7 +470,7 @@ img {
 
 .footer_menu_nav_item a {
   text-decoration: none;
-  color: #F1F5F7;
+  color: var(--basic-background);
 }
 
 .footer_menu_accortment {
@@ -469,7 +479,7 @@ img {
 
 .footer_menu_accortment_item a {
   text-decoration: none;
-  color: #FFD180;
+  color: var(--color-footer-link);
 }
 
 .footer_menu_accortment_item a:hover,
@@ -486,11 +496,7 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
-  background-color: #293449;
-}
-
-.footer_feedback_messenger {
-  visibility: hidden;
+  background-color: var(--basic-darkblue);
 }
 
 .messengers {
@@ -500,7 +506,7 @@ img {
 .footer_feedback_mail a,
 .footer_feedback_delevoper a {
   text-decoration: none;
-  color: #FFD180;
+  color: var(--color-footer-link);
 }
 
 .footer_feedback_mail a:hover,
@@ -517,10 +523,6 @@ img {
   font-size: 18px;
 }
 
-.support_h2 {
-  visibility: hidden;
-}
-
 .button_support {
   background-color: var(--basic-red);
   text-transform: uppercase;
@@ -534,9 +536,22 @@ img {
 }
 
 .button_support:hover {
-  background-color: #CA2C37;
+  background-color: var(--color-botton-hover);
 }
 
 .button_support:focus {
-  background-color: #BA2732;
+  background-color: var(--color-button-focus);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
