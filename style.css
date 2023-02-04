@@ -1,0 +1,557 @@
+:root {
+  --basic-font-family: "Cuprum", "PT Sans", sans-serif;
+  --second-font-family: "PT Sans", sans-serif;
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-background: #F1F5F7;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-darkblue: #293449;
+  --color-nav-focus: rgba(255, 255, 255, 0.5);
+  --basic-yellow: #FFBF47;
+  --basic-bluish: #3BBCE3;
+  --basic-pink: #DC91D8;
+  --basic-lightgreen: #8ED78F;
+  --background-color-accortment-items-link: rgba(255, 255, 255, 0.3);
+  --background-color-accortment-items-link-hover: rgba(197, 197, 197, 0.3);
+  --background-color-accortment-items-link-focus: rgba(169, 169, 169, 0.3);
+  --background-color-slider-text: rgba(0, 0, 0, 0.25);
+  --background-color-popular-header: #F9F5F0;
+  --color-botton-hover: #CA2C37;
+  --color-button-focus: #BA2732;
+  --color-border-popular: #EAEAEA;
+  --color-text-del: #A9A9A9;
+  --color-border-shadow-botton-buy: #367315;
+  --color-button-buy-hover: #5FBB2D;
+  --color-button-buy-focus: #518534;
+  --color-darkblue: #32425C;
+  --color-darkblue-focus: rgba(50, 66, 92, 0.5);
+  --color-shadow-manufacturers-hover: rgba(0, 0, 0, 0.05);
+  --color-shadow-manufacturers-focus: rgba(0, 0, 0, 0.025);
+  --color-shadow-button-advantages: #405069;
+  --color-footer-link: #FFD180;
+}
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--basic-font-family);
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: none;
+  background-color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: var(--basic-background);
+}
+
+.header_cap {
+  background-color: var(--basic-grey);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.header_cap_search:focus,
+.header_cap_search input {
+  visibility: hidden;
+}
+
+.header_cap_search input:focus {
+  visibility: visible;
+}
+
+/*с поиском чет пока не выходит, попробую позже разобраться, сейчас это не является специальным
+ заданием, я просто для себя пытаюсь понять механизм работы */
+.header_cap_bookmarks {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.header_cap_basket {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.header_cap_order {
+  text-decoration: none;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+}
+
+.header_info {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+  font-style: italic;
+}
+
+.header_info_tel {
+  font-style: normal;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+.header_info_address {
+  color: var(--color-darkblue);
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.button_entry {
+  text-align: center;
+  color: var(--basic-black);
+  font-size: 21px;
+  vertical-align: middle;
+  border: none;
+  background-color: var(--basic-white);
+  font-style: normal;
+}
+
+.header_registration {
+  font-size: 21px;
+  background-color: var(--basic-white);
+  text-decoration: none;
+  color: var(--basic-black);
+  text-align: center;
+  vertical-align: middle;
+  font-style: normal;
+}
+
+.header_registration:hover,
+.button_entry:hover {
+  color: var(--basic-red);
+}
+
+.header_registration:focus,
+.button_entry:focus {
+  color: #C5C5C5;
+}
+
+.header_nav {
+  background-color: var(--basic-grey);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.header_nav_list {
+  list-style: none;
+}
+
+.header_nav_link {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.header_nav_link:focus {
+  color: var(--color-nav-focus);
+}
+
+.header_nav_list li:hover,
+.header_nav_list li:focus {
+  background-color: var(--basic-darkblue);
+}
+
+.main {
+  background-color: var(--basic-white);
+}
+
+.accortment {
+  color: var(--basic-white);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.accortment_items {
+  list-style: none;
+}
+
+.accortment_items_material {
+  background-color: var(--basic-yellow);
+}
+
+.accortment_items_tool {
+  background-color: var(--basic-bluish);
+}
+
+.accortment_items_technic {
+  background-color: var(--basic-pink);
+}
+
+.accortment_items_discount {
+  background-color: var(--basic-lightgreen);
+}
+
+.accortment_items_delivery {
+  background-color: var(--basic-yellow);
+}
+
+.accortment_items_link {
+  color: var(--basic-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: var(--background-color-accortment-items-link);
+  text-align: center;
+}
+
+.accortment_items_link:hover {
+  background-color: var(--background-color-accortment-items-link-hover);
+}
+
+.accortment_items_link:focus {
+  background-color: var(--background-color-accortment-items-link-hover);
+}
+
+.accortment_slider_list {
+  list-style: none;
+}
+
+.accortment_slider_figcaption {
+  font-size: 36px;
+  line-height: 30px;
+  background-color: var(--background-color-slider-text);
+  text-transform: uppercase;
+}
+
+.accortment_slider_figcaption_text {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.button_link {
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.button_link:hover {
+  background-color: var(--color-botton-hover);
+}
+
+.button_link:focus {
+  background-color: var(--color-button-focus);
+}
+
+.popular_prod_h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  background-color: var(--background-color-popular-header);
+  font-weight: 400;
+  color: #32425C var(--color-darkblue);
+}
+
+.popular_prod_list {
+  font-family: var(--second-font-family);
+  list-style: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popular_prod_item {
+  border: 1px solid var(--color-border-popular);
+}
+
+.popular_prod_item del {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--color-text-del);
+}
+
+.popular_prod_item b {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.prod_link {
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.button_buy {
+  font-family: var(--basic-font-family);
+  text-transform: uppercase;
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--color-border-shadow-botton-buy);
+  border-radius: 2px;
+  border: none;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button_buy:hover {
+  background-color: var(--color-button-buy-hover);
+}
+
+.button_buy:focus {
+  background-color: var(--color-button-buy-focus);
+}
+
+.button_bookmarks {
+  font-family: var(--basic-font-family);
+  text-transform: uppercase;
+  color: var(--color-darkblue);
+  font-size: 14px;
+  line-height: 18px;
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+  background-color: var(--basic-white);
+}
+
+.button_bookmarks:hover {
+  border: solid var(--color-darkblue);
+}
+
+.button_bookmarks:focus {
+  border: solid var(--color-darkblue-focus);
+  color: var(--color-darkblue-focus);
+}
+
+.popular_manufacturers_h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  background-color: var(--background-color-popular-header);
+  font-weight: 400;
+  color: var(--color-darkblue);
+}
+
+.popular_manufacturers_list {
+  list-style: none;
+}
+
+.popular_manufacturers_item {
+  border: 1px solid var(--color-border-popular);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.popular_manufacturers_item:hover {
+  box-shadow: 1px 1px 2px 3px var(--color-shadow-manufacturers-hover);
+}
+
+.popular_manufacturers_item:focus {
+  box-shadow: 1px 1px 2px 3px var(--color-shadow-manufacturers-focus);
+  opacity: 0.5;
+}
+
+.advantages {
+  background-color: var(--basic-background);
+  font-family: var(--second-font-family);
+}
+
+.advantages_list {
+  list-style: none;
+}
+
+.advantages_item_h3 {
+  font-family: var(--basic-font-family);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.advantages_amenities_h3 {
+  visibility: hidden;
+}
+
+.advantages_amenities_button {
+  background-color: var(--color-darkblue);
+  font-family: var(--basic-font-family);
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-white);
+  border: none;
+  box-shadow: 0px 1px 0px var(--basic-darkblue),
+    inset 0px 1px 0px var(--color-shadow-button-advantages);
+}
+
+.advantages_amenities_button:hover {
+  background: var(--basic-darkblue);
+  box-shadow: 0px 1px 0px var(--basic-darkblue),
+    inset 0px 1px 0px var(--color-shadow-button-advantages);
+}
+
+.advantages_amenities_button:focus {
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+  color: var(--color-darkblue);
+}
+
+.service_list {
+  list-style: none;
+}
+
+.service_item_h3 {
+  font-family: var(--basic-font-family);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--color-darkblue);
+  font-weight: 400;
+}
+
+.information_h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.information_text {
+  font-family: var(--second-font-family);
+}
+
+.transport_companies {
+  list-style-image: url("images/list-style.png");
+}
+
+/*не получается выровнить картинку ничего толкового не могу найти*/
+
+.transport_companies_company {
+  font-size: 18px;
+}
+
+.contacts_h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.contacts p {
+  font-family: var(--second-font-family);
+}
+
+.footer {
+  background-color: var(--basic-grey);
+  color: var(--basic-white);
+  font-size: 18px;
+}
+
+.footer_menu_tel {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.footer_menu_nav {
+  list-style: none;
+}
+
+.footer_menu_nav_item a {
+  text-decoration: none;
+  color: var(--basic-background);
+}
+
+.footer_menu_accortment {
+  list-style: none;
+}
+
+.footer_menu_accortment_item a {
+  text-decoration: none;
+  color: var(--color-footer-link);
+}
+
+.footer_menu_accortment_item a:hover,
+.footer_menu_nav_item a:hover {
+  text-decoration: underline;
+}
+
+.footer_menu_accortment_item a:focus,
+.footer_menu_nav_item a:focus {
+  opacity: 0.5;
+}
+
+.footer_feedback {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-darkblue);
+}
+
+.messengers {
+  list-style: none;
+}
+
+.footer_feedback_mail a,
+.footer_feedback_delevoper a {
+  text-decoration: none;
+  color: var(--color-footer-link);
+}
+
+.footer_feedback_mail a:hover,
+.footer_feedback_delevoper a:hover {
+  text-decoration: underline;
+}
+
+.footer_feedback_mail a:focus,
+.footer_feedback_delevoper a:focus {
+  color: var(--basic-red);
+}
+
+.support {
+  font-size: 18px;
+}
+
+.button_support {
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--basic-white);
+  border: none;
+}
+
+.button_support:hover {
+  background-color: var(--color-botton-hover);
+}
+
+.button_support:focus {
+  background-color: var(--color-button-focus);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
