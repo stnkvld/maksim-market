@@ -55,8 +55,8 @@
     <h1 class="visually-hidden">Техномарт</h1>
     <section class="accortment">
       <h2 class="accortment_h2 visually-hidden">У нас есть</h2>
-      <div class="accortment_items-position">
-        <ul class="accortment_items">
+      <div class="accortment_items-position-up">
+        <ul class="accortment_items-up">
           <li class="accortment_items_material accortment__item">
             <h3>Материалы</h3>
             <a class="accortment_items_link" href="blank.html">на любой вкус</a>
@@ -69,6 +69,10 @@
             <h3>Техника</h3>
             <a class="accortment_items_link" href="blank.html">для стройки</a>
           </li>
+        </ul>
+      </div>
+      <div class="accortment_items-position-down">
+        <ul class="accortment_items-down">
           <li class="accortment_items_discount accortment__item">
             <h3>Скидка 50%</h3>
             <a class="accortment_items_link" href="blank.html">на 350 товаров</a>
@@ -77,31 +81,30 @@
             <h3>Доставка</h3>
             <a class="accortment_items_link" href="blank.html">бесплатно</a>
           </li>
-        </ul>
-      </div>
-      <div class="accortment_slider">
-        <ul class="accortment_slider_list">
           <li class="accortment_slider_item1">
-            <figure class="accortement__slider-img"> <img src="images/MenAndPuncher.jpg"
-                alt="Мужчины работают перфоратором" width="620" height="266">
-              <figcaption class="accortment_slider_figcaption">Перфораторы<p class="accortment_slider_figcaption_text">
-                  Настоящие мужские игрушки</p>
+            <figure class="accortement__slider-figure"> <img class="accortement__slider-img" src="images/MenAndPuncher.jpg"
+              alt="Мужчины работают перфоратором" width="620" height="266">
+              <figcaption class="accortment_slider_figcaption-item1">Перфораторы<p class="accortment_slider_figcaption_text">
+                Настоящие мужские игрушки</p>
               </figcaption>
             </figure>
           </li>
           <li class="accortment_slider_item2">
-            <figure class="accortement__slider-img"> <img src="images/MenAndDrill.jpg" alt="Мужчины работают дрелью"
-                width="620" height="266">
-              <figcaption class="accortment_slider_figcaption">Дрели<p class="accortment_slider_figcaption_text">
-                  Соседям на радость!</p>
+            <figure class="accortement__slider-figure"> <img class="accortement__slider-img" src="images/MenAndDrill.jpg" alt="Мужчины работают дрелью"
+              width="620" height="266">
+              <figcaption class="accortment_slider_figcaption-item2">Дрели<p class="accortment_slider_figcaption_text">
+                Соседям на радость!</p>
               </figcaption>
-            </figure>
+              </figure>
           </li>
         </ul>
-        <button class="accortment_slider_button_back" type="button" disabled>Назад</button>
-        <!-- как будто выпадают из ощей концепции, не пойму почему-->
-        <button class="accortment_slider_button_forward" type="button">Вперед</button>
-        <a class="button_link" href="catalog_poncher.html">Открыть каталог</a>
+      </div>
+      <div class="slider__position-button">
+          <button class="accortment_slider_button_back" type="button" disabled>Назад</button>
+          <!-- как будто выпадают из ощей концепции, не пойму почему-->
+          <button class="accortment_slider_button_forward" type="button">Вперед</button>
+          <a class="button_link button__catalog-open" href="catalog_poncher.html">Открыть каталог</a>
+        </div>
       </div>
     </section>
     <section class="popular_prod">
@@ -165,7 +168,6 @@
 
     <section class="popular_manufacturers">
       <h2 class="popular_manufacturers_h2">Популярные производители:</h2>
-      </div>
       <ul class="popular_manufacturers_list">
         <li class="popular_manufacturers_item"><a href="catalog_BOSCH"> <img class="manufacturers__img"
               src="images/bosch.png" alt="BOSCH" width="126" height="37"></a></li>
@@ -220,7 +222,7 @@
                   возгоранием, вы всегда можете быть уверены в нашей<br>
                   гарантии. Мы обменяем сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.</p>
-                <p class="service_item_img"><img src="images/Layer_1330.png" alt="Марка качества" width="389"
+                <p class="service_item_img"><img src="images/Guarantee.png" alt="Марка качества" width="389"
                     height="283"> </p>
               </li>
               <li class="service_item-credit">
@@ -301,8 +303,9 @@
 
   <section class="support">
     <h2 class="visually-hidden">Служба поддержки</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p class="support_name"><label>Ваше имя:<br>
+    <form action="https://echo.htmlacademy.ru" method="post" class="support__container">
+      <p class="support_name">
+        <label>Ваше имя:<br>
           <input class="support_name_window" type="text" name="UserName" placeholder="Имя Фамилия">
         </label>
       </p>
@@ -317,9 +320,9 @@
             placeholder="В свободной форме"></textarea>
         </label>
       </p>
-      <p><button class="button_support" type="submit">Отправить</button></p>
+      <p class="button_support-position"><button class="button_support" type="submit">Отправить</button></p>
     </form>
-    <button class="button_close_support" type="button">Закрыть</button>
+    <p class="button_close_support-position"><button class="button_close_support" type="button">Закрыть</button></p>
   </section>
 
 </body>
